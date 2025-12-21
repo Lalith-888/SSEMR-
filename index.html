@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Room Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>Smart Room Infrastructure</h1>
+
+<div class="grid">
+  <div class="card"><h3>Temperature</h3><p id="temp">--</p></div>
+  <div class="card"><h3>Humidity</h3><p id="hum">--</p></div>
+  <div class="card"><h3>Air Quality</h3><p id="aqi">--</p><span id="aqiTag" class="tag">--</span></div>
+  <div class="card"><h3>Motion</h3><span id="motion" class="tag gray">--</span></div>
+  <div class="card"><h3>Flame</h3><span id="flame" class="tag green">--</span></div>
+  <div class="card"><h3>Occupancy</h3><p id="occ">--</p></div>
+</div>
+
+<div class="controls">
+  <h2>Smart Controls</h2>
+
+  <div class="control-row">
+    <label>Auto Mode</label>
+    <label class="switch">
+      <input type="checkbox" id="autoMode">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="control-row">
+    <label>Fan</label>
+    <label class="switch">
+      <input type="checkbox" id="fanToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="control-row">
+    <label>Buzzer</label>
+    <label class="switch">
+      <input type="checkbox" id="buzzToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
+
+<h2>Live Sensor Graph</h2>
+<canvas id="chart"></canvas>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
