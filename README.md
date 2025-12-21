@@ -1,4 +1,4 @@
-#### 🏠 SSEMR — Smart Room Environment Monitoring & Response System
+## 🏠 SSEMR — Smart Room Environment Monitoring & Response System
 
 
 SSEMR is a **smart room automation and environmental monitoring system** designed using:
