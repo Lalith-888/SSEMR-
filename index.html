@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Room Infrastructure</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>SSEMR – Smart Room Dashboard</h1>
+
+<div class="cards">
+  <div class="card"><h3>Temperature</h3><p id="temp">--</p></div>
+  <div class="card"><h3>Humidity</h3><p id="hum">--</p></div>
+  <div class="card"><h3>AQI</h3><p id="aqi">--</p><span id="aqiTag" class="tag">--</span></div>
+  <div class="card"><h3>Motion</h3><span id="motion" class="tag gray">--</span></div>
+  <div class="card"><h3>Flame</h3><span id="flame" class="tag green">SAFE</span></div>
+  <div class="card"><h3>Occupancy</h3><p id="occ">--</p></div>
+</div>
+
+<h2>Smart Controls</h2>
+<div class="panel">
+  <div class="opt">
+    <label>Auto Mode</label>
+    <label class="switch"><input type="checkbox" id="auto"><span class="slider"></span></label>
+  </div>
+
+  <div class="opt">
+    <label>Fan</label>
+    <label class="switch"><input type="checkbox" id="fan"><span class="slider"></span></label>
+  </div>
+
+  <div class="opt">
+    <label>Buzzer</label>
+    <label class="switch"><input type="checkbox" id="buzz"><span class="slider"></span></label>
+  </div>
+</div>
+
+<h2>Live Graph</h2>
+<canvas id="chart"></canvas>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
