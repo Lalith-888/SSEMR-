@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSEMR Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div id="loader">Loading Dashboard...</div>
+
+<h1>SSEMR Smart Room Dashboard</h1>
+
+<div class="grid">
+  <div class="card"><h3>Temperature (°C)</h3><span id="temp">--</span></div>
+  <div class="card"><h3>Humidity (%)</h3><span id="hum">--</span></div>
+  <div class="card">
+    <h3>AQI</h3>
+    <span id="aqi">--</span>
+    <span id="aqitag" class="tag gray">--</span>
+  </div>
+  <div class="card">
+    <h3>Motion</h3>
+    <span id="motion" class="tag gray">--</span>
+  </div>
+  <div class="card">
+    <h3>Flame</h3>
+    <span id="flame" class="tag green">SAFE</span>
+  </div>
+  <div class="card">
+    <h3>Occupancy</h3>
+    <span id="occ">--</span>
+  </div>
+</div>
+
+<h2>Controls</h2>
+<div class="controls">
+  <div class="ctrl-item">
+    <span>AUTO</span>
+    <label class="switch">
+      <input type="checkbox" id="autoBtn">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="ctrl-item">
+    <span>FAN</span>
+    <label class="switch">
+      <input type="checkbox" id="fanBtn">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="ctrl-item">
+    <span>BUZZER</span>
+    <label class="switch">
+      <input type="checkbox" id="buzzBtn">
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
+
+<h2>Sensor Chart</h2>
+<canvas id="chart" height="130"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
