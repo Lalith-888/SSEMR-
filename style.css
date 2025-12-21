@@ -1,0 +1,120 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial; }
+
+body {
+  background:#f2f2f2;
+  padding:20px;
+  color:#222;
+  text-align:center;
+}
+
+.dark body {
+  background:#111;
+  color:white;
+}
+
+h1 { margin-bottom:25px; }
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:20px;
+}
+
+.card {
+  font-size:22px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(12px);
+  box-shadow:0 4px 18px rgba(0,0,0,0.1);
+}
+
+.dark .card {
+  background:rgba(20,20,20,0.6);
+}
+
+/* TAGS */
+.tag {
+  padding:4px 14px;
+  border-radius:10px;
+  margin-top:12px;
+  display:inline-block;
+  font-size:16px;
+}
+
+.green { background:#00ff00; color:#000; }
+.yellow { background:#ffff00; color:#000; }
+.red { background:#ff3333; color:#fff; }
+.gray { background:#aaa; color:#000; }
+
+/* SWITCHES */
+.switch {
+  position:relative;
+  display:inline-block;
+  width:58px;
+  height:30px;
+}
+
+.switch input { display:none; }
+
+.slider {
+  position:absolute;
+  cursor:pointer;
+  top:0; left:0;
+  right:0; bottom:0;
+  background:#999;
+  border-radius:34px;
+  transition:.4s;
+}
+
+.slider:before {
+  position:absolute;
+  content:"";
+  height:24px; width:24px;
+  left:3px; bottom:3px;
+  background:white;
+  border-radius:50%;
+  transition:.4s;
+}
+
+input:checked + .slider {
+  background:#2ecc71;
+}
+input:checked + .slider:before {
+  transform:translateX(28px);
+}
+
+/* CONTROLS */
+.controls {
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin:25px 0;
+  font-size:20px;
+}
+.ctrl-item { display:flex; flex-direction:column; gap:10px; }
+
+/* THEME SWITCH */
+.theme-switch {
+  position:absolute;
+  top:25px;
+  right:35px;
+}
+
+.theme-switch .slider {
+  width:60px; height:30px;
+  background:#888;
+}
+
+.theme-switch .slider:before {
+  width:26px; height:26px;
+}
+
+.theme-switch input:checked + .slider {
+  background:#f4d03f;
+}
+.theme-switch input:checked + .slider:before {
+  transform:translateX(30px);
+}
